@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sqlite/views/categories_screen.dart';
 import 'package:flutter_sqlite/views/home_screen.dart';
 
 class NavigationDrawer extends StatefulWidget {
@@ -30,7 +31,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
             ListTile(
               title: Text('Categories'),
               leading: Icon(Icons.category),
-              onTap: (){},
+              onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CategoriesScreen())),
             ),
           ],
         ),
